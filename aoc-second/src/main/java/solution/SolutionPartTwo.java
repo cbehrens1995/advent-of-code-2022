@@ -1,13 +1,11 @@
 package solution;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
+import utils.FileUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class SolutionPartTwo {
@@ -15,7 +13,7 @@ public class SolutionPartTwo {
     public static final String INPUT = "input.txt";
 
     public static void main(String[] args) throws IOException {
-        String data = loadData();
+        String data = FileUtil.loadData(INPUT);
 
         List<Pair<Hand, Outcome>> rounds = data.lines()
                 .map(StringUtils::split)
@@ -51,11 +49,5 @@ public class SolutionPartTwo {
                 case SCISSOR -> Hand.PAPER.getHandScore();
             };
         };
-    }
-
-    private static String loadData() throws IOException {
-        ClassLoader classLoader = Solution.class.getClassLoader();
-        File file = new File(classLoader.getResource(INPUT).getFile());
-        return FileUtils.readFileToString(file, StandardCharsets.UTF_8);
     }
 }

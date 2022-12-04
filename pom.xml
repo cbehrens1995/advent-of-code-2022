@@ -11,6 +11,7 @@
     <modules>
         <module>aoc-first</module>
         <module>aoc-second</module>
+        <module>aoc-commons</module>
     </modules>
 
     <properties>

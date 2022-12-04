@@ -1,11 +1,9 @@
 package solution;
 
-import org.apache.commons.io.FileUtils;
+import utils.FileUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +14,7 @@ public class Solution {
     public static final String INPUT = "input.txt";
 
     public static void main(String[] args) throws IOException {
-        String data = loadData();
+        String data = FileUtil.loadData(INPUT);
 
         HashMap<Integer, BigDecimal> totalCaloriesByElf = getTotalCaloriesByElf(data);
 
@@ -50,11 +48,5 @@ public class Solution {
             totalCaloriesByElf.merge(elfCount.get(), calorie, BigDecimal::add);
         }
         return totalCaloriesByElf;
-    }
-
-    private static String loadData() throws IOException {
-        ClassLoader classLoader = Solution.class.getClassLoader();
-        File file = new File(classLoader.getResource(INPUT).getFile());
-        return FileUtils.readFileToString(file, StandardCharsets.UTF_8);
     }
 }
