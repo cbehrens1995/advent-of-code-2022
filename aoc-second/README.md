@@ -1,4 +1,4 @@
-# advent-of-code-2022 - 01.12.2022
+# advent-of-code-2022 - 02.12.2022
 
 https://adventofcode.com/2022/day/2
 
