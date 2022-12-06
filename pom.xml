@@ -14,6 +14,7 @@
         <module>aoc-commons</module>
         <module>aoc-third</module>
         <module>aoc-fourth</module>
+        <module>aoc-fifth</module>
         <module>aoc-sixth</module>
     </modules>
 
