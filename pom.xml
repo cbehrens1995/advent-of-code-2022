@@ -19,6 +19,7 @@
         <module>aoc-seventh</module>
         <module>aoc-eigth</module>
         <module>aoc-nineth</module>
+        <module>aoc-tenth</module>
     </modules>
 
     <properties>
