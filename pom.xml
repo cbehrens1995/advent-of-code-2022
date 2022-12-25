@@ -18,6 +18,7 @@
         <module>aoc-sixth</module>
         <module>aoc-seventh</module>
         <module>aoc-eigth</module>
+        <module>aoc-nineth</module>
     </modules>
 
     <properties>
